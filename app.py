@@ -2,7 +2,6 @@ from services import *
 from archive import *
 from validations import *
 
-print("Welcome to app!")
 
 
 #This function, called “menu,” launches the program

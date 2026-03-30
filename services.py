@@ -1,9 +1,10 @@
 from validations import *
 
+#in this list you see all students 
 Liststudent = []
 
 
-
+#this method add students 
 def addStudents():
 
 
@@ -50,7 +51,7 @@ def addStudents():
             print("Enter Status Valid")
 
         
-    
+
         student = { 
                     "identification": idEstudent,
                     "name" : nameEstudent,
@@ -62,7 +63,7 @@ def addStudents():
         Liststudent.append(student)
 
 
-
+#this method show all students 
 def showStudents():
     
     for student in Liststudent:
@@ -75,6 +76,8 @@ def showStudents():
                 status: {student['status']}
             """)
 
+
+#this method serach student by name.
 def searchStudents():
 
     search = input("Enter name student: ").lower().strip()
@@ -91,12 +94,13 @@ def searchStudents():
                 status: {student['status']}
             """)
             exist = True
-            return True  # Retornar True si se encontró
+            return True  
     
     if not exist:
         print("Student name not found.")
-        return False  # Retornar False si no se encontró
+        return False  
     
+#update student by name
 def updateStudents():
 
     search = input("Enter name student: ").lower().strip()
@@ -149,6 +153,8 @@ def updateStudents():
             print("Student name not found.")
             return False
         
+
+# delete students whit name 
 def deleteStudents():
     search = input("Enter name student to delete: ").lower().strip()
     exist = False
